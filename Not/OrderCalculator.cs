@@ -5,6 +5,8 @@ namespace Not
 {
     public class OrderCalculator
     {
+
+        // this could be in a config file
         private double _defaultTaxRate = .05;
 
         public double CalculateTotal(Order o)
@@ -13,6 +15,7 @@ namespace Not
             {
                 case "PA":
                     {
+                        // rate from db?
                         return o.Items.Sum(i => i.Price) * 1.06;
                     }
 

@@ -1,4 +1,5 @@
-﻿using Shared;
+﻿using Microsoft.Extensions.Configuration;
+using Shared;
 using System.Linq;
 
 namespace OpenClosed
@@ -6,7 +7,6 @@ namespace OpenClosed
     public class OrderCalculator
     {
         private readonly ITaxCalculatorFactory _taxCalculatorFactory;
-        private double _defaultTaxRate = .05;
 
         public double CalculateTotal(Order o)
         {
